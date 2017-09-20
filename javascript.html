@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		function buttonClick() {
+			var inputCtrl = document.getElementById("thename");
+			var newName = inputCtrl.value;
+			console.log(newName);
+			var spanCtrl = document.getElementById("theMessage");
+			spanCtrl.textContent = "Thanks for following directions.";
+
+			var checkCtrl = document.getElementById("chkbox")
+			if(checkCtrl.checked) {
+				spanCtrl.textContent += " - I appreciate it!";
+			} else {
+				spanCtrl.textContent += " - You NERD!";
+			}
+		}
+		function bodyLoad() {
+			var pCtrl = document.getElementById("theline");
+			var txt = pCtrl.textContent;
+			pCtrl.textContent += " - Greg";
+		}
+	</script>
+</head>
+<body onload="bodyLoad()">
+
+	<p id="theline">This is the only line in the web page</p>
+
+	<input id="thename" type="text" placeholder="Enter your name" value="">
+	<button onclick="buttonClick()">Click me!</button>
+	<span id="theMessage">No message yet!</span>
+
+	<p>
+		<input id="chkbox" type="checkbox">Clean responses only!</input>
+	</p>
+
+</body>
+</html>
