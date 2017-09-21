@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title></title>
+	<script lang="javascript">
+		var num = 0;
+		function inc() {
+			num++;
+			display();
+		}
+		function dec() {
+			num--;
+			display();
+		}
+		function display() {
+			var inputCtrl = document.getElementById("nbr");
+			inputCtrl.value = num;
+		}
+	</script>
+</head>
+<body>
+	<button onclick="dec()">-</button>
+	<input id="nbr" type="text" style="text-align: center;">
+	<button onclick="inc()">+</button>
+</body>
+</html>
